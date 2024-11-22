@@ -1,0 +1,310 @@
+/* project buat neyaaaaaaa*/
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.body1 {
+  background-color: #ffefe9;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.body3 {
+  background-color: #ccd3ca;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.main-text1,
+.main-text3,
+.h2 {
+  color: #ff8dc7;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  font-family: Arial, sans-serif;
+}
+
+.h3,
+.h31,
+.h32 {
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  font-family: Arial, sans-serif;
+}
+
+.main-text1 {
+  font-size: 22px;
+}
+
+.main-text3 {
+  font-size: 16px;
+}
+
+.h2,
+.h31 {
+  font-size: 16px;
+  animation-delay: 1s;
+}
+
+.h32 {
+  font-size: 16px;
+  animation-delay: 2s;
+}
+
+.h3,
+.h31,
+.h32 {
+  color: #3d3522;
+  font-size: 16px;
+}
+
+.credit {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: #ff8dc7;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1s;
+}
+
+.credit3 {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: #3d3522;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 1s;
+}
+
+.button1 {
+  --primary-color: #ffacc7;
+  --secondary-color: #fff;
+  --hover-color: #ffb9b9;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  transition: 0.2s background;
+}
+
+.button2 {
+  --primary-color: #3d3522;
+  --secondary-color: #fff;
+  --hover-color: #5e5240;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  transition: 0.2s background;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* buat responsive */
+
+/* For smartphones (portrait) */
+@media screen and (max-width: 600px) {
+  .main-text1 {
+    font-size: 18px;
+  }
+
+  .main-text3 {
+    font-size: 16px;
+  }
+
+  .h2 {
+    font-size: 14px;
+  }
+
+  .h3 {
+    font-size: 14px;
+  }
+
+  .h31 {
+    font-size: 14px;
+  }
+
+  .h32 {
+    font-size: 14px;
+  }
+
+  .button1 {
+    padding: 0.8em 1.5em;
+  }
+
+  .button2 {
+    padding: 0.8em 1.5em;
+  }
+}
+
+/* For tablets (portrait) */
+@media screen and (max-width: 768px) {
+  .main-text1 {
+    font-size: 20px;
+  }
+
+  .main-text3 {
+    font-size: 17px;
+  }
+
+  .h2 {
+    font-size: 15px;
+  }
+
+  .h3 {
+    font-size: 15px;
+  }
+
+  .h31 {
+    font-size: 15px;
+  }
+
+  .h32 {
+    font-size: 15px;
+  }
+
+  .button1 {
+    padding: 1em 1.6em;
+  }
+
+  .button2 {
+    padding: 1em 1.6em;
+  }
+}
+
+/* For larger screens */
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .main-text1 {
+    font-size: 24px;
+  }
+
+  .main-text3 {
+    font-size: 20px;
+  }
+
+  .h2 {
+    font-size: 18px;
+  }
+
+  .h3 {
+    font-size: 18px;
+  }
+
+  .h31 {
+    font-size: 18px;
+  }
+
+  .h32 {
+    font-size: 18px;
+  }
+
+  .button1 {
+    padding: 1.2em 2em;
+  }
+
+  .button2 {
+    padding: 1.2em 2em;
+  }
+}
